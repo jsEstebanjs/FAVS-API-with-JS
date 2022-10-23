@@ -36,7 +36,7 @@ module.exports = {
       const data = req.body;
 
       const { id } = req.params
-      console.log(id)
+
     
       const list = await List.findById(id);
   

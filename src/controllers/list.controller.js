@@ -6,7 +6,6 @@ module.exports = {
   async list(req, res) {
     try {
       const list = await List.find().populate("fav","title description");
-      console.log(list)
       res.status(200).json({ message: "List found", data: list });
 
     } catch (err) {
@@ -60,7 +59,6 @@ module.exports = {
   async destroy(req, res) {
     try{
       const { id } = req.params;
-      console.log(req.params)
 
       const list = await List.findByIdAndDelete(id);
 
